@@ -55,3 +55,29 @@ var sumar = function(a, b, c = 4){
     return a + b + c;
 }
 console.log(sumar(10, 4));
+console.log('***************');
+
+/**plantillas de cadena o interpolacion*/
+var lastName = 'zapata';
+console.log(`tu lastname es ${lastName}`);
+
+/**examen de curso*/
+
+var calcularScore = function(name, positives, negatives){
+    var porcentajePositivas = (positives / 100) * 100;
+    var porcentajeNegativas = (negatives / 100) * 100;
+    var score ='';
+    if (positives > 90){
+        score = 'A';
+    }else if (porcentajePositivas >= 70){
+        score = 'B';
+    }else if (porcentajePositivas >= 45){
+        score = 'C';
+    }else {
+        score = 'D';
+    }  
+    return `${name} tiene el score ${score}, Positivas: ${porcentajePositivas}%, Negativas ${porcentajeNegativas}%` 
+}
+
+var resultado = calcularScore('pepe', 72, 28);
+console.log(resultado);
